@@ -1,0 +1,82 @@
+{
+  "expo": {
+    "name": "TaxPilot Pro",
+    "slug": "ca-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#2c3e50"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.taxpilot.pro",
+      "infoPlist": {
+        "NSCameraUsageDescription": "TaxPilot needs camera access to scan and capture documents",
+        "NSPhotoLibraryUsageDescription": "TaxPilot needs photo library access to select documents",
+        "NSFaceIDUsageDescription": "TaxPilot uses Face ID for secure login"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#2c3e50"
+      },
+      "package": "com.taxpilot.pro",
+      "versionCode": 1,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "USE_BIOMETRIC",
+        "USE_FINGERPRINT",
+        "RECEIVE_BOOT_COMPLETED",
+        "VIBRATE",
+        "INTERNET",
+        "ACCESS_NETWORK_STATE"
+      ]
+    },
+    "plugins": [
+      "expo-document-picker",
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "TaxPilot needs camera access to scan documents"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "TaxPilot needs photo library access to select documents",
+          "cameraPermission": "TaxPilot needs camera access to capture documents"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "TaxPilot uses Face ID for secure login"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#3498db"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1e86f2f8-e811-492b-823e-7509e3f528b8"
+      },
+      "apiUrl": "https://ca-backend-psi.vercel.app/api"
+    },
+    "owner": "nikhildubey-23"
+  }
+}

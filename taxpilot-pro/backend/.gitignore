@@ -1,0 +1,42 @@
+# Environment
+.env
+*.env
+
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+backend.log
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+instance/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Uploads
+uploads/

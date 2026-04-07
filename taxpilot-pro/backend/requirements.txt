@@ -1,0 +1,14 @@
+flask
+flask-cors
+flask-jwt-extended
+flask-sqlalchemy
+sqlalchemy
+python-dotenv
+bcrypt
+requests
+werkzeug
+gunicorn
+psycopg2-binary
+boto3
+pdfplumber
+PyPDF2

@@ -197,6 +197,11 @@ def delete_user(user_id):
     for folder in folders:
         db.session.delete(folder)
     
+    UserFolderAllocation.query.filter_by(user_id=user_id).delete()
+    
+    from models.tax_record import TaxRecord
+    TaxRecord.query.filter_by(user_id=user_id).delete()
+    
     db.session.delete(user)
     db.session.commit()
     

@@ -201,6 +201,10 @@ def delete_user(user_id):
         # Delete folder allocations
         UserFolderAllocation.query.filter_by(user_id=user_id).delete(synchronize_session=False)
         
+        # Delete tax records
+        from models.tax_record import TaxRecord
+        TaxRecord.query.filter_by(user_id=user_id).delete(synchronize_session=False)
+        
         db.session.delete(user)
         db.session.commit()
         
